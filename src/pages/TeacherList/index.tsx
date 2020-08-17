@@ -10,6 +10,7 @@ import { Feather } from '@expo/vector-icons';
 import api from '../../services/api';
 
 import AsyncStorage from '@react-native-community/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 function TeacherList() {
     const [teachers, setTeachers] = useState([]);
@@ -48,6 +49,10 @@ function TeacherList() {
             }
         });
     }
+
+    useFocusEffect(() => {
+        loadFavorites();
+    });
 
     return (
         <View style={styles.container}>
