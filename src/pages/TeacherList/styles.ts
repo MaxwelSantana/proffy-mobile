@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     inputBlock: {
         width: '48%'
     },
-
+    
     input: {
         height: 54,
         backgroundColor: '#FFF',
